@@ -1,0 +1,62 @@
+﻿
+
+using System;
+
+namespace ConsoleApp18
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Student Konul = new Student
+            {
+                Name = "Konul",
+                Surname = "Huseynli",
+                UserName = "huseynli_konul",
+                Password = "hk20032003",
+                Grade = 95
+            };
+            Student Ilqar = new Student
+            {
+                Name = "Ilqar",
+                Surname = "Huseynli",
+                UserName = "huseynofv.xd",
+                Password = "huseynli2003",
+            };
+            Student Aysun = new Student
+            {
+                Name = "Aysun",
+                Surname = "Huseynli",
+                UserName = "huseynli_02",
+                Password = "06092003",
+                Grade = 95
+            };
+            Student Zinet = new Student
+            {
+                Name = "Zinet",
+                Surname = "Huseynli",
+                UserName = "huseynli_zinet__",
+                Password = "zinet0409",
+            };
+
+            Student[] Students = { Konul, Ilqar, Aysun, Zinet };
+
+            Console.WriteLine("Zehmet olmasa Istifadeci adini daxil edin: ");
+            string IncludedUserName = Console.ReadLine();
+            Console.WriteLine("Zehmet olmasa Parolu daxil edin: ");
+            string IncludedPassword = Console.ReadLine();
+
+            foreach (var user in Students)
+            {
+                if (user.UserName == IncludedUserName && user.Password == IncludedPassword)
+                {
+                    user.GetData();
+                }
+            }
+
+            }
+        }
+    }
+
+    
+
